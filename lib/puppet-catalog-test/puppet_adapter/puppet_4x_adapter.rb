@@ -39,8 +39,6 @@ module PuppetCatalogTest
         Puppet::Parser::Compiler.compile(node)
       rescue => e
         raise e
-      ensure
-        Puppet::Test::TestHelper.after_each_test
       end
     end
   end

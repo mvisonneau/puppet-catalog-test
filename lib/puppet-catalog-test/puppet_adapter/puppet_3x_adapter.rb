@@ -44,8 +44,6 @@ module PuppetCatalogTest
         validate_relationships(catalog)
       rescue => e
         raise e
-      ensure
-        Puppet::Test::TestHelper.after_each_test
       end
     end
 
