@@ -28,6 +28,8 @@ module PuppetCatalogTest
     end
 
     def create_node(hostname, facts)
+      Puppet::Test::TestHelper.before_each_test
+      init_config
       node = Puppet::Node.new(hostname, :facts => Puppet::Node::Facts.new("facts", facts))
       node.merge(facts)
       node
